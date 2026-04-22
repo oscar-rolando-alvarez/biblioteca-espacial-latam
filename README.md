@@ -25,6 +25,12 @@ Esta biblioteca no es un libro cerrado — es una **semilla navegable**. Cada ar
 | 07 | `07-mineria-espacial.md` | Tipos de asteroides, Δv a NEOs, ISRU, economía real, regulación |
 | 08 | `08-recursos.md` | Libros canónicos, cursos, software libre, comunidades LatAm, papers |
 | 09 | `09-plan-estudio.md` | Secuencia concreta de 5-10 años para aprender lo anterior |
+| 10 | `10-biblioteca-libros.md` | Índice de PDFs libres bajo `libros/` y diagramas bajo `imagenes/`, con licencias |
+
+## Contenido descargado
+
+- **`libros/`** — ~20 PDFs de obras con licencia libre o dominio público: OpenStax, Boyd, Axler, Tong (DAMTP), NASA (SE Handbook, SP-125, SP-413, SOA 2024), Keck Institute, Lunar Sourcebook y más. Ver [10-biblioteca-libros.md](10-biblioteca-libros.md) para índice completo con niveles y licencias.
+- **`imagenes/`** — diagramas y fotos de Wikimedia Commons (NASA/JAXA dominio público, CC-BY-SA): órbitas, ciclos de motor cohete, V-model, TRL, asteroides visitados. Embebidas en los módulos correspondientes.
 
 ## Horizonte honesto
 

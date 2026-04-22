@@ -22,6 +22,13 @@ Este documento separa la **ciencia de los recursos** (qué hay y cómo se caract
 | **V** | Diferenciados, basaltos (como Vesta) | raros | 0.30-0.55 |
 
 **Targets de alto interés comercial**:
+
+| ![Bennu por OSIRIS-REx](imagenes/bennu-osiris-rex.jpg) | ![Ryugu por Hayabusa2](imagenes/ryugu-hayabusa2.jpg) | ![433 Eros por NEAR](imagenes/eros-near-shoemaker.jpg) |
+|:---:|:---:|:---:|
+| **101955 Bennu** (C-type) — OSIRIS-REx, 2020 | **162173 Ryugu** (C-type) — Hayabusa2, 2018 | **433 Eros** (S-type) — NEAR Shoemaker, 2000 |
+
+*Imágenes: NASA / JAXA, dominio público vía Wikimedia Commons.*
+
 - **101955 Bennu** (C-type): visitado OSIRIS-REx, muestra retornada 2023. Hydrated minerals, agua estructural.
 - **162173 Ryugu** (C-type): visitado Hayabusa2. Regolith con agua y orgánicos.
 - **16 Psyche** (M-type, del cinturón principal): posiblemente 90% metal. Psyche mission NASA llega 2029. No NEO pero de alto interés metalúrgico.

@@ -4,6 +4,9 @@ La diferencia entre un proyecto escolar y una misión real es la disciplina de i
 
 ## 1. Ciclo de vida — modelo V
 
+![V-model de ingeniería de sistemas](imagenes/v-model.svg)
+*Rama descendente: definición y diseño. Rama ascendente: verificación y validación. Cada nivel de diseño se valida contra el nivel equivalente de requerimientos. Imagen: Wikimedia Commons.*
+
 ```
   Requerimientos misión ───────────────────────────────► Operaciones
        │                                                      ▲
@@ -23,6 +26,9 @@ La diferencia entre un proyecto escolar y una misión real es la disciplina de i
 Cada nivel de descenso define qué, cada nivel de ascenso verifica contra qué. No hay atajo — saltear niveles produce hardware defectuoso que nadie sabe explicar cuando falla.
 
 ## 2. Technology Readiness Levels (TRL)
+
+![Escala TRL de NASA](imagenes/trl-meter-nasa.svg)
+*Los 9 niveles de TRL. La diferencia entre "funciona en laboratorio" (TRL 4) y "voló" (TRL 9) se paga en millones. Imagen: Wikimedia Commons.*
 
 Escala NASA/DOD (1-9). Mismo concepto en ECSS.
 

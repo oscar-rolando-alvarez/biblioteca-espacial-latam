@@ -2,6 +2,9 @@
 
 El corazón matemático del negocio. Sin fluidez en esto no se puede dimensionar una misión, negociar un lanzamiento, o validar un payload.
 
+![Las tres leyes de Kepler](imagenes/kepler-laws.svg)
+*Leyes de Kepler — el punto de partida histórico y conceptual. Imagen: Wikimedia Commons, dominio público.*
+
 ## 1. El problema de dos cuerpos
 
 ### Ecuación fundamental
@@ -38,6 +41,9 @@ T = 2π √(a³/μ)
 ```
 
 ## 2. Elementos orbitales clásicos (COE)
+
+![Elementos orbitales clásicos](imagenes/orbital-elements.svg)
+*Los seis elementos keplerianos: a, e, i, Ω, ω, ν. Imagen: Wikimedia Commons, CC-BY-SA.*
 
 Seis parámetros que definen una órbita en el espacio inercial:
 
@@ -76,12 +82,18 @@ tan(ν/2) = √((1+e)/(1−e)) · tan(E/2)
 - **Lunar NRHO** (Near-Rectilinear Halo Orbit) — usada por Gateway, estable, ~9:2 resonancia con rotación lunar.
 - **L1/L2 Halo** (Sol-Tierra) — JWST, SOHO, Herschel. Lagrange points.
 
+![Órbitas satelitales a escala](imagenes/comparacion-orbitas-satelitales.svg)
+*Comparación a escala: LEO (ISS), MEO (GPS, Galileo), GEO. Imagen: Wikimedia Commons.*
+
 ## 3. Maniobras orbitales
 
 ### Impulso finito vs instantáneo
 Para estudio de misión se asume maniobras impulsivas (Δv instantáneo). Para diseño real con bajo empuje se integra la ecuación de Tsiolkovsky con perfiles de thrust continuo.
 
 ### Transferencia Hohmann (dos impulsos, coplanar)
+
+![Transferencia de Hohmann](imagenes/hohmann-transfer.svg)
+*Dos quemas tangenciales entre órbitas circulares coplanares. Imagen: Wikimedia Commons.*
 
 De órbita circular r1 a r2, r2 > r1:
 ```
@@ -100,6 +112,10 @@ Tiempo de transferencia:
 - Total Δv = 3.943 km/s, tiempo = 5h15min.
 
 ### Bi-elíptica (tres impulsos)
+
+![Transferencia bi-elíptica](imagenes/bi-elliptic-transfer.svg)
+*Tres impulsos, atajo por un apoapsis alto. Imagen: Wikimedia Commons.*
+
 Más eficiente que Hohmann sólo para r2/r1 > 11.94. Útil para transferencias lunares desde LEO (cislunar transfer).
 
 ### Cambio de plano (plane change)
@@ -251,6 +267,12 @@ pero aumenta por geometría de espiral — la versión exacta es dependiente de 
 
 ## 9. Puntos de Lagrange y mecánica restringida de tres cuerpos
 
+![Puntos de Lagrange Sol-Tierra](imagenes/lagrange-points.svg)
+*Los cinco puntos de equilibrio del CR3BP. L1/L2/L3 colineales (inestables), L4/L5 triangulares (estables si m1/m2 > 24.96). Imagen: Wikimedia Commons.*
+
+![Equipotenciales del CR3BP](imagenes/lagrange-equipotential.png)
+*Contornos de potencial efectivo en marco rotante. Los L-points son máximos (L4/L5) o puntos de silla (L1/L2/L3). Imagen: Wikimedia Commons.*
+
 ### Problema restringido circular de tres cuerpos (CR3BP)
 Dos primaries masivos en órbita circular alrededor del CM, tercer cuerpo de masa despreciable. Marco rotante ligado a las primaries.
 
@@ -286,6 +308,9 @@ Trayectorias que explotan manifolds invariantes de órbitas periódicas para tra
 - Koon, Lo, Marsden, Ross, "Dynamical Systems, the Three-Body Problem and Space Mission Design" — PDF gratuito online.
 
 ## 10. Δv budgets de referencia
+
+![Mapa de Δv del sistema solar interno](imagenes/delta-v-solar-system.svg)
+*Δv aproximado entre cuerpos del sistema solar interno. Sumar valores a lo largo del camino elegido. Imagen: Wikimedia Commons.*
 
 | Maniobra | Δv (m/s) |
 |----------|----------|

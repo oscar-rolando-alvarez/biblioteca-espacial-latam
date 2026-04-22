@@ -4,6 +4,9 @@ Todo lo que se hace en el espacio depende de la propulsión. Esta nota explica l
 
 ## 1. La ecuación fundamental — Tsiolkovsky
 
+![Ecuación de Tsiolkovsky](imagenes/tsiolkovsky-equation.svg)
+*La ecuación del cohete. Imagen: Wikimedia Commons.*
+
 ```
 Δv = v_e · ln(m₀ / m_f) = Isp · g₀ · ln(m₀ / m_f)
 ```
@@ -27,6 +30,9 @@ m_p / m₀ = 1 − exp(−Δv / (Isp · g₀))
 - Δv = 3 v_e → propelente = 95.0%.
 
 Esto es la **tiranía de la ecuación del cohete**: cada Isp adicional multiplica exponencialmente la carga útil posible para Δv altos.
+
+![Ratio de masa vs Δv](imagenes/rocket-mass-ratio-dv.svg)
+*Ratio de masas (m₀/m_f) requerido en función del Δv/v_e. Nota la explosión exponencial cuando Δv > 2 v_e. Imagen: Wikimedia Commons.*
 
 ### Staging (etapas)
 Descartar masa estructural a medida que se vacían tanques. Cada etapa tiene su propio Tsiolkovsky y el Δv total se suma:
@@ -120,27 +126,48 @@ Típico SL: 10-20. Típico vacuum: 80-250 (RL-10: ~285).
 
 ## 5. Ciclos de motores cohete
 
+Los diagramas siguientes muestran el flujo de combustible y oxidante en cada arquitectura. Preguntarse siempre: *¿dónde se pierde Isp?* (gas generator → descarga por overboard) vs *¿dónde se gana?* (staged combustion → todo termina en la cámara).
+
 ### Pressure-fed
 Tanques presurizados empujan propelente. Simple, sin turbobombas. Limitado a baja presión de cámara (<10 bar típico).
 - Usado: motores de reacción control, upper stages pequeños, Stoke Hopper.
 
 ### Gas generator (ciclo abierto)
+
+![Ciclo gas generator](imagenes/rocket-cycle-gas-generator.svg)
+*Gas generator: los gases de turbina se descartan — pérdida de Isp a cambio de simplicidad. Imagen: Wikimedia Commons.*
+
 Fracción pequeña del propelente quemado en pre-combustor a mezcla baja (rica en combustible) para turbina que mueve bombas. Los gases de turbina se expulsan sin más uso → pérdida de Isp.
 - Simple, relativamente barato.
 - Usado: F-1 (Saturn V), Merlin, Raptor genera-gás en prototipos previos, Rutherford (eléctrico-drive en realidad).
 
 ### Staged combustion (ciclo cerrado)
+
+![Ciclo staged combustion](imagenes/rocket-cycle-staged-combustion.svg)
+*Staged combustion: los gases de turbina van a la cámara principal. Ganancia de Isp, costo en complejidad térmica. Imagen: Wikimedia Commons.*
+
 Pre-combustor descarga en la cámara principal. No hay pérdida. Más complejo, Isp más alto.
 - **Oxidizer-rich staged combustion (ORSC)**: común en motores rusos (RD-180, RD-170). Turbina corre con gas oxidante — requiere metalurgia especial.
 - **Fuel-rich staged combustion**: SSME/RS-25. Turbina con gas reductor — más benigno químicamente.
 - **Full-flow staged combustion (FFSC)**: dos pre-combustores (uno fuel-rich, uno ox-rich), ambos gaseificados antes de cámara principal. SpaceX Raptor (primero operacional).
 
+![Ciclo full-flow staged combustion](imagenes/rocket-cycle-full-flow-staged.svg)
+*FFSC: ambos propelentes pasan por turbinas antes de la cámara. El esquema del Raptor. Imagen: Wikimedia Commons.*
+
 ### Expander cycle
+
+![Ciclo expander](imagenes/rocket-cycle-expander.svg)
+*Expander: el combustible se vaporiza regenerativamente y mueve la turbina. Sin pre-combustor. Imagen: Wikimedia Commons.*
+
 Combustible (típicamente LH2 o CH4) absorbe calor regenerativo, se vaporiza, mueve turbina, y se inyecta en cámara. Sin pre-combustor. Limitado por superficie disponible para calentar.
 - Confiable, limpio.
 - Usado: RL-10, Vinci, LE-9 (closed expander bleed).
 
 ### Electric pump (electric-driven)
+
+![Ciclo electric pump-fed](imagenes/rocket-cycle-electric-feed.svg)
+*Electric pump: motor eléctrico + baterías reemplazan la turbobomba. El esquema del Rutherford. Imagen: Wikimedia Commons.*
+
 Bombas movidas por motor eléctrico con baterías Li-Ion. Elimina turbobomba compleja.
 - Rocket Lab Rutherford primero operacional.
 - Penalidad: masa de baterías (se descartan con la etapa).
