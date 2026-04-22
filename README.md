@@ -42,6 +42,68 @@ Esta biblioteca no es un libro cerrado — es una **semilla navegable**. Cada ar
 
 **La extracción de recursos asteroidales como negocio rentable no está en la ventana de 20 años** para nadie, ni para ustedes ni para AstroForge ni para TransAstra. Lo que sí está: ser el proveedor líder en información de prospección, simulación de operaciones, payloads espectroscópicos. Ahí el juego es ganable.
 
+## Arquitectura
+
+La biblioteca está organizada como una secuencia numerada donde cada módulo apoya a los siguientes. Las matemáticas y la física fundamental son el prerrequisito duro de todo lo demás; la estrategia LatAm se alimenta tanto de la ingeniería como del contexto de negocio.
+
+### Mapa de dependencias entre módulos
+
+```mermaid
+flowchart TD
+    M00[00 Estrategia LatAm<br/>roadmap 20 años]
+    M01[01 Matemáticas<br/>cálculo, EDO, álgebra lineal]
+    M02[02 Física fundamental<br/>mecánica, termo, EM, plasma]
+    M03[03 Mecánica orbital<br/>Kepler, Hohmann, Lambert]
+    M04[04 Propulsión<br/>Tsiolkovsky, Isp, electroprop]
+    M05[05 Ingeniería de sistemas<br/>V-model, TRL, ECSS, FMEA]
+    M06[06 Subsistemas<br/>GNC, EPS, TCS, comms]
+    M07[07 Minería espacial<br/>NEOs, ISRU, economía]
+    M08[08 Recursos<br/>libros, cursos, papers]
+    M09[09 Plan de estudio<br/>5-10 años]
+    M10[10 Biblioteca de libros<br/>PDFs bajo libros/]
+
+    M01 --> M02
+    M02 --> M03
+    M02 --> M04
+    M03 --> M04
+    M03 --> M07
+    M04 --> M07
+    M05 --> M06
+    M06 --> M07
+    M00 --> M09
+    M05 --> M00
+    M07 --> M00
+    M08 --> M09
+    M10 --> M08
+    M09 -.revisa.-> M01
+    M09 -.revisa.-> M02
+    M09 -.revisa.-> M03
+```
+
+### Horizonte temporal de la startup
+
+```mermaid
+flowchart LR
+    A[Años 0-3<br/>aprendizaje + consultoría] --> B[Años 3-7<br/>datos satelitales, software, componentes]
+    B --> C[Años 7-12<br/>primer CubeSat propio<br/>contratos recurrentes]
+    C --> D[Años 12-17<br/>lanzador pequeño<br/>Alcântara / Kourou]
+    D --> E[Años 17-20+<br/>misión propia a NEO<br/>prospección]
+```
+
+### Recursos externos referenciados
+
+```mermaid
+flowchart LR
+    Lib[libros/] --> OpenStax[OpenStax]
+    Lib --> Boyd[Boyd Convex Optimization]
+    Lib --> Axler[Axler Linear Algebra]
+    Lib --> Tong[Tong DAMTP]
+    Lib --> NASA[NASA SE Handbook<br/>SP-125, SP-413, SOA 2024]
+    Lib --> Keck[Keck Institute]
+    Lib --> Lunar[Lunar Sourcebook]
+    Img[imagenes/] --> Wiki[Wikimedia Commons<br/>NASA / JAXA dominio público]
+```
+
 ## Cómo mantener esta biblioteca
 
 - Cada vez que leas un libro de la lista, agregá notas en el archivo correspondiente.
